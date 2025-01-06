@@ -34,11 +34,11 @@
             width: 100%;
             height: 100%;
             background-image: url('https://cdn.gamma.app/fhpleqvbjim2f32/40f79c3e814a47108ad7bc075355dd89/original/image-1.jpg');
-            background-size: 30%; /* Bild auf 30% verkleinert */
+            background-size: 30%;
             background-position: center;
-            background-repeat: repeat; /* Verhindert, dass das Bild wiederholt wird */
+            background-repeat: repeat;
             z-index: -1;
-            opacity: 0.5; /* Leicht transparent */
+            opacity: 0.5;
             transition: opacity 0.3s ease-in-out;
         }
 
@@ -212,6 +212,18 @@
             overflow: hidden;
         }
 
+        .audio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .audio-container audio {
+            width: 100%;
+            max-width: 600px;
+        }
+
         /* Media Queries */
         @media (max-width: 768px) {
             main {
@@ -236,11 +248,11 @@
             }
 
             iframe {
-                height: 300px; /* Anpassung der iframe-Höhe auf kleineren Bildschirmen */
+                height: 300px;
             }
         }
 
-       /* Chatbot Widget */
+        /* Chatbot Widget */
         #chatbot-widget {
             position: fixed;
             bottom: 20px;
@@ -284,46 +296,46 @@
         }
 
         #chatbot-container iframe {
-           width: 100%;
-           height: 100%;
-           border: none;
-           border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
         }
 
-    #chat-response {
-        width: 100%;
-        height: 300px;
-        overflow-y: auto;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 10px;
-        background: #fff;
-        color: #333;
-    }
+        #chat-response {
+            width: 100%;
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #fff;
+            color: #333;
+        }
 
-    #chat-input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
+        #chat-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
 
-    #send-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #003366;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+        #send-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    #send-btn:hover {
-        background-color: #002244;
-    }
+        #send-btn:hover {
+            background-color: #002244;
+        }
     </style>
 </head>
 
@@ -333,13 +345,13 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
 
     <div id="chatbot-widget">
-       <button id="chatbot-toggle">🤖 Chatbot starten</button>
-       <div id="chatbot-container">
-         <div id="chat-response">Willkommen beim Chatbot!</div>
-         <input type="text" id="chat-input" placeholder="Schreibe eine Nachricht...">
-         <button id="send-btn">Senden</button>
-       </div>
-   </div>
+        <button id="chatbot-toggle">🤖 Chatbot starten</button>
+        <div id="chatbot-container">
+            <div id="chat-response">Willkommen beim Chatbot!</div>
+            <input type="text" id="chat-input" placeholder="Schreibe eine Nachricht...">
+            <button id="send-btn">Senden</button>
+        </div>
+    </div>
 
     <div class="container">
         <main>
@@ -352,144 +364,202 @@
                 <div class="menu-item" onclick="showDescription('mpu-quiz')">QUIZZE UND SPIELE</div>
                 <div class="menu-item" onclick="showDescription('gutachtersimulator')">ALTERUNGSSTOPP SIMULATOR</div>
                 <div class="menu-item" onclick="showDescription('checkliste')">ALTERUNGSSTOPP CHECKLISTE</div>
-                <div class="menu-item" onclick="showDescription('frageboegen')">ALTERUNGSSTOPP FRAGEBÖGEN</div>
+                <div class="menu-item" onclick="showDescription('frageboegen')">ALTERUNGSSTOPP „KI und die Zukunft der Menschheit: Was du wissen musst.</div>
                 <div class="menu-item" onclick="showDescription('ki-assistent')">ALTERUNGSSTOPP KI BERATER</div>
             </div>
 
             <div class="content-container">
                 <div class="description" id="ablauf-description">
                     <h3>JUNGSINGULÄR ABLAUF DER VORBEREITUNG</h3>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <ul>
-
-                      <p>JUNGSINGULÄR APP - ALTERUNGSSTOPP APP</p>
-
-                     <p><button class="button" onclick="window.open('https://zaha175.github.io/VIVAVITALAPP/', '_blank')">JUNGSINGULÄR APP - ALTERUNGSSTOPP APP<i class="fas fa-external-link-alt"></i></button><p>
-                      <iframe src="https://zaha175.github.io/VIVAVITALAPP/" ></iframe> 
+                        <p>JUNGSINGULÄR APP - ALTERUNGSSTOPP APP</p>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/VIVAVITALAPP/', '_blank')">JUNGSINGULÄR
+                                APP - ALTERUNGSSTOPP APP<i class="fas fa-external-link-alt"></i></button>
+                        </p>
+                        <iframe src="https://zaha175.github.io/VIVAVITALAPP/"></iframe>
                     </ul>
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI Berater <i class="fas fa-external-link-alt"></i></button>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <button class="button"
+                        onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP
+                        KI Berater <i class="fas fa-external-link-alt"></i></button>
                 </div>
                 <div class="description" id="kosten-description">
                     <h3>JUNGSINGULÄR VORBEREITUNG</h3>
-
-                  <p>DETAILS ZUR VORBEREITUNG</p>
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                
-                 <p>ALTERUNGSSTOPP KI-Berater fragen: </p>
-                 <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI-Berater ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
-                 </div>
-                 <div class="description" id="leistungstests-description">
-                     <h3>JUNGSINGULÄR REAKTIONSTESTS</h3>
-                      <p>Hier findest du alle Leistungstests wie Reaktionstests und Konzentrationsübungen.</p>
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                       <ul>
-                         <p><button class="button" onclick="window.open('https://gamma.app/docs/MPUNEUREAKTIONSTEST-79vwbbrski77oor', '_blank')">REAKTIONSTESTS AUFRUFEN <i class="fas fa-external-link-alt"></i></button></p>
-                         <p>REAKTIONSTESTS:</p>
-
-                         <p>FIGURENVERGLEICHSTEST</p>
-                         <p><button class="button" onclick="window.open('https://zaha175.github.io/FIGURENVERGLEICHSTEST/', '_blank')">FIGURENVERGLEICHSTEST <i class="fas fa-external-link-alt"></i></button></p>
-
-                         <p>KONZENTRATIONSTEST</p>
-                         <p><button class="button" onclick="window.open('https://zaha175.github.io/Verkehrssituationstext/', '_blank')">KONZENTRATIONSTEST<i class="fas fa-external-link-alt"></i></button></p>
-                       
-                         <p>MERHFACHSITUATIONSTESTS</p>
-                         <p>MERHFACHSITUATIONSTEST</p>
-                         <p><button class="button" onclick="window.open('https://zaha175.github.io/MERHFACHSITUATIONSTEST/', '_blank')">MERHFACHSITUATIONSTEST <i class="fas fa-external-link-alt"></i></button><p>
-
+                    <p>DETAILS ZUR VORBEREITUNG</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>ALTERUNGSSTOPP KI-Berater fragen: </p>
+                    <button class="button"
+                        onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP
+                        KI-Berater ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
+                </div>
+                <div class="description" id="leistungstests-description">
+                    <h3>JUNGSINGULÄR REAKTIONSTESTS</h3>
+                    <p>Hier findest du alle Leistungstests wie Reaktionstests und Konzentrationsübungen.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <ul>
+                        <p><button class="button"
+                                onclick="window.open('https://gamma.app/docs/MPUNEUREAKTIONSTEST-79vwbbrski77oor', '_blank')">REAKTIONSTESTS
+                                AUFRUFEN <i class="fas fa-external-link-alt"></i></button></p>
+                        <p>REAKTIONSTESTS:</p>
+                        <p>FIGURENVERGLEICHSTEST</p>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/FIGURENVERGLEICHSTEST/', '_blank')">FIGURENVERGLEICHSTEST
+                                <i class="fas fa-external-link-alt"></i></button></p>
+                        <p>KONZENTRATIONSTEST</p>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/Verkehrssituationstext/', '_blank')">KONZENTRATIONSTEST<i
+                                    class="fas fa-external-link-alt"></i></button></p>
+                        <p>MERHFACHSITUATIONSTESTS</p>
+                        <p>MERHFACHSITUATIONSTEST</p>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/MERHFACHSITUATIONSTEST/', '_blank')">MERHFACHSITUATIONSTEST
+                                <i class="fas fa-external-link-alt"></i></button>
+                        <p>
                         <p>MERHFACHSITUATIONSTEST1</p>
-                         <p><button class="button" onclick="window.open('https://zaha175.github.io/MEHRFACHSITUATIONSTEST1/', '_blank')">MERHFACHSITUATIONSTEST1 <i class="fas fa-external-link-alt"></i></button><p>
-
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/MEHRFACHSITUATIONSTEST1/', '_blank')">MERHFACHSITUATIONSTEST1
+                                <i class="fas fa-external-link-alt"></i></button>
+                        <p>
                         <p>MERHFACHSITUATIONSTEST2</p>
-                         <p><button class="button" onclick="window.open('https://zaha175.github.io/MEHRFACHSITUATIONSTEST2/', '_blank')">MERHFACHSITUATIONSTEST2 <i class="fas fa-external-link-alt"></i></button><p>
-                       </ul>
-                   </div>
-                   <div class="description" id="checkliste-description">
-                       <h3>JUNGSINGULÄR ALTERUNGSSTOPP - Checkliste</h3>
-                        <p>Schritt für Schritt zur erfolgreichen ALTERUNGSSTOPP: Nutzen Sie unsere Checkliste, um den Überblick zu behalten und sich optimal vorzubereiten.</p>
-                         <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                         <h3>JUNGSINGULÄR ALTERUNGSSTOPP KI-Berater</h3>
-                        <p>Der ALTERUNGSSTOPP KI-Berater ist bereit, dir bei allen ALTERUNGSSTOPP-Fragen zu helfen.</p>
-                        <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI-Berater ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
-                  </div>
-                   <div class="description" id="mpu-qa-description">
-                       <h3>JUNGSINGULÄR ALTERUNGSSTOPP-APP: FRAGEN UND ANTWORTEN</h3>
-                        <p>Fragen und Antworten zur Vorbereitung.</p>
-                           <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                           <div class="audio-container">
-                               <h3>Podcast für Vorbereitung anhören!</h3>
-                                <audio controls>
-                                 <source src="Zellalterung.mp3" type="audio/mpeg">
-                                  Dein Browser unterstützt die Audiowiedergabe nicht.
-                                </audio>
-                            </div>
-                          <h3>JUNGSINGULÄR FRAGEN UND ANTWORTEN</h3>
-                          </ul>
-
-                           <p> JUNGSINGULÄR FRAGEN UND ANTWORTEN APP <p>
-                          <p><button class="button" onclick="window.open('https://zaha175.github.io/ALTERUNGSSTOPPAPP/', '_blank')">JUNGSINGULÄR FRAGEN UND ANTWORTEN APP <i class="fas fa-external-link-alt"></i></button><p>
-                          <iframe src="https://zaha175.github.io/ALTERUNGSSTOPPAPP/" ></iframe> 
-                           </ul>
-                           <h3>Abstinenz</h3>
-                          </ul>
-                           <p><button class="button" onclick="window.open('https://zaha175.github.io/FRAGENUNDANTWORTEN/', '_blank')">MPU APP: FRAGEN UND ANTWORTEN <i class="fas fa-external-link-alt"></i></button><p>
-                           <p><button class="button" onclick="window.open('https://zaha175.github.io/FRAGUNDANTWERKL-RUNGEN/', '_blank')">MPU APP: FRAGEN UND ANTWORTEN ERKLÄRT <i class="fas fa-external-link-alt"></i></button><p>
-                           </ul>
-                   </div>
-                  <div class="description" id="ki-assistent-description">
-                       <h3>JUNGSINGULÄR ALTERUNGSSTOPP KI-Berater</h3>
-                       <p>Der KI-Berater ist bereit, dir bei allen ALTERUNGSSTOPP Fragen zu helfen.</p>
-                       <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI-Berater ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
-                  </div>
-                   <div class="description" id="promille-rechner-description">
-                      <h3>JUNGSINGULÄR ALTERUNGSSTOPP RECHNER</h3>
-                     </ul>
-
-                      <p>JUNGSINGULÄR LEBENSALTER-RECHNER</p>
-                     <p><button class="button" onclick="window.open('https://zaha175.github.io/LEBENSALTER-RECHNER/', '_blank')">LEBENSALTER-RECHNER mit Diagramm <i class="fas fa-external-link-alt"></i></button><p>
-                     <iframe src="https://zaha175.github.io/LEBENSALTER-RECHNER/" ></iframe> 
- 
-                     <p>JUNGSINGULÄR ALKOHOLKONSUMRECHNER MIT DIAGRAMM</p>
-                      <p><button class="button" onclick="window.open('https://zaha175.github.io/MENGENACHPROMILLE/', '_blank')">ALKOHOLKONSUMRECHNER MIT DIAGRAMM<i class="fas fa-external-link-alt"></i></button><p>
-                     <iframe src="https://zaha175.github.io/MENGENACHPROMILLE/" ></iframe> 
- 
-                     <p>JUNGSINGULÄR PROMILLERECHNER MIT DIAGRAMM</p>
-                     <p><button class="button" onclick="window.open('https://zaha175.github.io/PROMILLERECHNERDE/', '_blank')">Promillerechner mit Diagramm <i class="fas fa-external-link-alt"></i></button><p>
-                      <iframe src="https://zaha175.github.io/PROMILLERECHNERDE/" ></iframe> 
- 
-                     </ul>
-                  </div>
-                  <div class="description" id="mpu-quiz-description">
-                     <h3>JUNGSINGULÄR ALTERUNGSSTOPP Quiz und Spiele</h3>
-                       </ul>
-                        <p>JUNGSINGULÄR ALTERUNGSSTOPP QUIZZE <p>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/MEHRFACHSITUATIONSTEST2/', '_blank')">MERHFACHSITUATIONSTEST2
+                                <i class="fas fa-external-link-alt"></i></button>
+                        <p>
+                    </ul>
+                </div>
+                <div class="description" id="mpu-qa-description">
+                    <h3>JUNGSINGULÄR ALTERUNGSSTOPP-APP: FRAGEN UND ANTWORTEN</h3>
+                    <p>Fragen und Antworten zur Vorbereitung.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="audio-container">
+                        <h3>Podcast für Vorbereitung anhören!</h3>
+                        <audio controls>
+                            <source src="Zellalterung.mp3" type="audio/mpeg">
+                            Dein Browser unterstützt die Audiowiedergabe nicht.
+                        </audio>
+                    </div>
+                    <h3>JUNGSINGULÄR FRAGEN UND ANTWORTEN</h3>
+                    <ul>
+                        <p>JUNGSINGULÄR FRAGEN UND ANTWORTEN APP
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/ALTERUNGSSTOPPAPP/', '_blank')">JUNGSINGULÄR
+                                FRAGEN UND ANTWORTEN APP <i class="fas fa-external-link-alt"></i></button>
+                        <p>
+                            <iframe src="https://zaha175.github.io/ALTERUNGSSTOPPAPP/"></iframe>
+                    </ul>
+                    <h3>Abstinenz</h3>
+                    <ul>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/FRAGENUNDANTWORTEN/', '_blank')">MPU APP:
+                                FRAGEN UND ANTWORTEN <i class="fas fa-external-link-alt"></i></button>
+                        <p>
+                            <p><button class="button"
+                                    onclick="window.open('https://zaha175.github.io/FRAGUNDANTWERKL-RUNGEN/', '_blank')">MPU
+                                    APP: FRAGEN UND ANTWORTEN ERKLÄRT <i
+                                        class="fas fa-external-link-alt"></i></button>
+                            <p>
+                    </ul>
+                </div>
+                <div class="description" id="promille-rechner-description">
+                    <h3>JUNGSINGULÄR ALTERUNGSSTOPP RECHNER</h3>
+                    <ul>
+                        <p>JUNGSINGULÄR LEBENSALTER-RECHNER</p>
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/LEBENSALTER-RECHNER/', '_blank')">LEBENSALTER-RECHNER
+                                mit Diagramm <i class="fas fa-external-link-alt"></i></button>
+                        <p>
+                            <iframe src="https://zaha175.github.io/LEBENSALTER-RECHNER/"></iframe>
+                            <p>JUNGSINGULÄR ALKOHOLKONSUMRECHNER MIT DIAGRAMM</p>
+                            <p><button class="button"
+                                    onclick="window.open('https://zaha175.github.io/MENGENACHPROMILLE/', '_blank')">ALKOHOLKONSUMRECHNER
+                                    MIT DIAGRAMM<i class="fas fa-external-link-alt"></i></button>
+                            <p>
+                                <iframe src="https://zaha175.github.io/MENGENACHPROMILLE/"></iframe>
+                                <p>JUNGSINGULÄR PROMILLERECHNER MIT DIAGRAMM</p>
+                                <p><button class="button"
+                                        onclick="window.open('https://zaha175.github.io/PROMILLERECHNERDE/', '_blank')">Promillerechner
+                                        mit Diagramm <i class="fas fa-external-link-alt"></i></button>
+                                <p>
+                                    <iframe src="https://zaha175.github.io/PROMILLERECHNERDE/"></iframe>
+                    </ul>
+                </div>
+                <div class="description" id="mpu-quiz-description">
+                    <h3>JUNGSINGULÄR ALTERUNGSSTOPP Quiz und Spiele</h3>
+                    <ul>
+                        <p>JUNGSINGULÄR ALTERUNGSSTOPP QUIZZE
+                        <p>
                         <p>QUIZ1</p>
-                        <p><button class="button" onclick="window.open('https://zaha175.github.io/QUIZ1/', '_blank')">QUIZ1 STARTEN <i class="fas fa-external-link-alt"></i></button> <p>
-
-                        <p>QUIZ2</p>
-                        <p><button class="button" onclick="window.open('https://zaha175.github.io/QUIZ2/', '_blank')">QUIZ2 STARTEN <i class="fas fa-external-link-alt"></i></button> <p> 
-
-                        <p>QUIZ3</p>
-                        <iframe src="https://zaha175.github.io/QUIZSUPERTOLL/" ></iframe> 
-                        </ul>
-                     <p>JUNGSINGULÄR ALTERUNGSSTOPP SPIELE <p>
-                     </ul>
-                   </div>
-                   <div class="description" id="gutachtersimulator-description">
-                      <h3>JUNGSINGULÄR ALTERUNGSSTOPP SIMULATOR</h3>
-
-                      <p>Simulation eines JUNGSINGULÄR ALTERUNGSSTOPP-Gesprächs.</p>
-                     <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI-SIMULATOR ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
-         
-                     <p>Der KI-Berater ist bereit, dir bei allen ALTERUNGSSTOPP Fragen zu helfen.</p>
-                      <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI-BERATER ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
-                  </div>
-                   <div class="description" id="frageboegen-description">
+                        <p><button class="button"
+                                onclick="window.open('https://zaha175.github.io/QUIZ1/', '_blank')">QUIZ1 STARTEN <i
+                                    class="fas fa-external-link-alt"></i></button>
+                        <p>
+                            <p>QUIZ2</p>
+                            <p><button class="button"
+                                    onclick="window.open('https://zaha175.github.io/QUIZ2/', '_blank')">QUIZ2 STARTEN
+                                    <i class="fas fa-external-link-alt"></i></button>
+                            <p>
+                                <p>QUIZ3</p>
+                                <iframe src="https://zaha175.github.io/QUIZSUPERTOLL/"></iframe>
+                    </ul>
+                    <p>JUNGSINGULÄR ALTERUNGSSTOPP SPIELE
+                    <p>
+                    </ul>
+                </div>
+                <div class="description" id="gutachtersimulator-description">
+                    <h3>JUNGSINGULÄR ALTERUNGSSTOPP SIMULATOR</h3>
+                    <p>Simulation eines JUNGSINGULÄR ALTERUNGSSTOPP-Gesprächs.</p>
+                    <button class="button"
+                        onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP
+                        KI-SIMULATOR ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
+                    <p>Der KI-Berater ist bereit, dir bei allen ALTERUNGSSTOPP Fragen zu helfen.</p>
+                    <button class="button"
+                        onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP
+                        KI-BERATER ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
+                </div>
+                <div class="description" id="checkliste-description">
+                    <h3>JUNGSINGULÄR ALTERUNGSSTOPP - „KI und die Zukunft der Menschheit: Was du wissen musst. Checkliste</h3>
+                    <p>Schritt für Schritt zur erfolgreichen Zukunft: Nutzen Sie unsere Checkliste, um den Überblick zu
+                        behalten und sich optimal vorzubereiten.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>JUNGSINGULÄR ALTERUNGSSTOPP KI-Berater</h3>
+                    <p>Der ALTERUNGSSTOPP KI-Berater ist bereit, dir bei allen ALTERUNGSSTOPP-Fragen zu helfen.</p>
+                    <button class="button"
+                        onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP
+                        KI-Berater ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
+                </div>
+                <div class="description" id="frageboegen-description">
                     <h3>JUNGSINGULÄR ALTERUNGSSTOPP FRAGEBÖGEN</h3>
-                     <p>Übungen und Fragebögen für die Vorbereitung</p>
-                     <button class="button" onclick="window.open('https://gamma.app/docs/MPUNEUREAKTIONSTEST-79vwbbrski77oor', '_blank')">FRAGEBÖGEN ANZEIGEN <i class="fas fa-external-link-alt"></i></button>
+                    <p>Übungen und Fragebögen für die Vorbereitung</p>
+                    <button class="button"
+                        onclick="window.open('https://gamma.app/docs/MPUNEUREAKTIONSTEST-79vwbbrski77oor', '_blank')">FRAGEBÖGEN
+                        ANZEIGEN <i class="fas fa-external-link-alt"></i></button>
+                </div>
+                 <div class="description" id="ki-assistent-description">
+                       <h3>JUNGSINGULÄR ALTERUNGSSTOPP KI BERATER</h3>
+                       <p>Der KI-Berater ist bereit, dir bei allen ALTERUNGSSTOPP Fragen zu helfen.</p>
+                       <button class="button" onclick="window.open('https://chatgpt.com/g/g-675ae9d9e02c819197d84b01adf301ee-mpuassistent', '_blank')">ALTERUNGSSTOPP KI-BERATER ÖFFNEN <i class="fas fa-external-link-alt"></i></button>
                   </div>
-                <div class="description" id="header-description">
+                 <div class="description" id="header-description">
                     <h3>Willkommen auf der JUNGSINGULÄR-Plattform</h3>
                     <p>Entdecken Sie die Geheimnisse eines langen und gesunden Lebens. Erfahren Sie mehr über die neun
                         Säulen der Langlebigkeit und wie Sie diese durch Ernährung, Bewegung, Schlaf, Stressmanagement
@@ -513,11 +583,11 @@
 
             let menuItems = document.querySelectorAll('.menu-item');
             menuItems.forEach(item => {
-                item.classList.remove('active'); // Entfernt die Klasse von allen
+                item.classList.remove('active');
             });
             let activeMenuItem = document.querySelector(`.menu-item[onclick="showDescription('${category}')"]`);
             if (activeMenuItem) {
-                activeMenuItem.classList.add('active'); // Fügt die Klasse dem aktuellen hinzu
+                activeMenuItem.classList.add('active');
             }
         }
 
